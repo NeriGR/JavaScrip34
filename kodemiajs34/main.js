@@ -1,9 +1,10 @@
+/*
 console.log("hola koders");
 
-/* delaclaracion*/
+delaclaracion
 let myName = "Gerardo Neri"
 
-/*Resignacion*/
+Resignacion
 myName = "Naomi Salinas"
 
 let foo = "some value";
@@ -64,3 +65,76 @@ secondKoderList.push("third koder");
 console.log(kodersList);
 
 console.log(secondKoderList);
+*/
+let myString = "hola koders";
+
+console.log(typeof myString);
+
+let myAge = 34;
+
+console.log(typeof myAge);
+
+let javascriptIsEasy = true;
+
+console.log(typeof javascriptIsEasy);
+
+let someVariable;
+
+console.log(someVariable);
+console.log(typeof someVariable);
+
+let hobbies = null;
+
+console.log(typeof hobbies);
+
+let koder = {
+    name:"Gerardo",
+    lastname:"Neri Reyes",
+    age: 27,
+    greeting: () => {
+        console.log("hola koders");
+    },
+};
+
+let dog = {
+    breed:"French",
+    owner:"Neri",
+    name:"Solovino",
+    color:"negro",
+    bark: ()=>{}
+}
+
+let koderList = [
+    "chavs",
+    "Vale",
+    "Lau",
+]
+
+let number1 = 10;
+let number2 = 5; 
+
+let addition = number1 + number2;
+console.log(addition);
+
+let substraction = number1 - number2;
+console.log(substraction);
+
+let multiplication = number1 * number2;
+console.log(multiplication);
+
+let secondResult = multiplication * 24
+console.log(number1 * 15);
+console.log(secondResult);
+
+let division = number1 / number2;
+console.log(division);
+
+let modulus = number1 % number2;
+console.log(modulus);
+
+console.log(++number1);
+console.log(number1);
+
+console.log(--number2)
+
+
