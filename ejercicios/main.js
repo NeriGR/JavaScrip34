@@ -1,3 +1,4 @@
+/*
 const pointsPerDice = (numberOnDice) => {
     let result;
     switch (numberOnDice) {
@@ -55,3 +56,29 @@ const twoDice = (firstDiceValue, secondDiceValue) => {
 
 }
 twoDice(2, 5);
+
+*/
+
+/*1*/
+let phraseYoda = "En un lugar oscuro nos encontramos, y un poco más de conocimiento ilumina nuestro camino.";
+    console.log("El numero de caracteres de esta frase son:", phraseYoda.length);
+
+/*2*/
+let phraseYoda1 = "En un lugar oscuro nos encontramos, y un poco más de conocimiento ilumina nuestro camino.";
+for(let i = 0; i < phraseYoda1.length; i++){
+    console.log(i,":", phraseYoda1[i]);
+}
+
+/*3*/
+let phraseYodaS = "En un lugar oscuro nos encontramos, y un poco más de conocimiento ilumina nuestro camino.";
+let vocalesRegex = /[aeiouáéíóúüAEIOUÁÉÍÓÚÜ]/g;
+let vocalesEncontradas = phraseYoda.match(vocalesRegex);
+let cantidadVocales = vocalesEncontradas ? vocalesEncontradas.length : 0;
+    console.log("El numero de Vocales en esta frase es de:", cantidadVocales);
+
+/*4*/
+let frase = "En un lugar oscuro nos encontramos, y un poco más de conocimiento ilumina nuestro camino.";
+let consonantesRegex = /[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]/g;
+let consonantesEncontradas = frase.match(consonantesRegex);
+let cantidadConsonantes = consonantesEncontradas ? consonantesEncontradas.length : 0;
+    console.log("El numero de consonantes en esta frase es de:", cantidadConsonantes); 
