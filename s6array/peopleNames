@@ -1,0 +1,17 @@
+let people = [
+    ["Juan", "Gómez", "Martínez"],
+    ["Ana", "Pérez", "López"],
+    ["Carlos", "Rodríguez", "García"],
+    ["María", "Fernández", "Sánchez"],
+    ["Luis", "Hernández", "Torres"],
+  ];
+function obtenerNombres(people) {
+    let nombres = [];
+    for (let i = 0; i < people.length; i++) {
+      nombres.push(people[i][0]);
+    }
+    return nombres;
+  }
+  let nombres = obtenerNombres(people);
+  
+  console.log(nombres);

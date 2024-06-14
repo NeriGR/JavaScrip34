@@ -1,0 +1,14 @@
+let numbers = [12, 45, 7, 33, 22, 14, 49, 27, 5, 38];
+let pares = obtenerPares(numbers);
+
+function obtenerPares(arrayNum) {
+    let pares = [];
+    for (let i = 0; i < arrayNum.length; i++) {
+      if (arrayNum[i] % 2 !== 0) {
+        pares.push(arrayNum[i]);
+      }
+    }
+    return pares;
+  }
+  
+  console.log(pares);
