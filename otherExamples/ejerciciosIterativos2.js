@@ -163,3 +163,5 @@ let blogEntries = [
   9.- Convierte las fechas de creación de las entradas de blog al formato "MM-DD-YYYY".
   10.- Reemplaza todas las ocurrencias de "JavaScript" en los contenidos de las entradas de blog por "JS".
   */
+
+  
