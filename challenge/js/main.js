@@ -35,70 +35,76 @@ const createCard = (user) => {
   const cardsRow = document.getElementById("cardsRow");
 
   const cardDiv = document.createElement("div");
-  cardDiv.className = "col-md-4 mb-3";
+  cardDiv.className = "col-12 col-md-6 mb-3";
 
   const card = document.createElement("div");
-  card.className = "card";
-  card.style.width = "18rem";
+  card.className =
+    "card bg-dark bg-gradient text-white d-flex flex-column m-3 p-3";
 
   const img = document.createElement("img");
   img.src = user.picSource;
-  img.className = "card-img-top";
+  img.className = "card-img-top rounded-circle mx-auto d-block";
   img.alt = user.name;
+  img.style.width = "50%";
+  img.style.objectFit = "cover";
   card.appendChild(img);
 
   const cardBody = document.createElement("div");
-  cardBody.className = "card-body";
+  cardBody.className = "card-body d-flex flex-column justify-content-between";
 
   const cardTitle = document.createElement("h5");
-  cardTitle.className = "card-title";
+  cardTitle.className = "card-title text-center";
   cardTitle.textContent = user.name;
   cardBody.appendChild(cardTitle);
 
+  const locationItem = document.createElement("h6");
+  locationItem.className = "list-group-item text-location text-center";
+  locationItem.textContent = user.location;
+  cardBody.appendChild(locationItem);
+
   const cardText = document.createElement("p");
-  cardText.className = "card-text";
-  cardText.textContent = user.aboutYou;
+  cardText.className = "card-text text-center text-about";
+  cardText.textContent = `"${user.aboutYou}"`;
   cardBody.appendChild(cardText);
 
-  card.appendChild(cardBody);
-
-  const listGroup = document.createElement("ul");
-  listGroup.className = "list-group list-group-flush";
-
-  const locationItem = document.createElement("li");
-  locationItem.className = "list-group-item";
-  locationItem.textContent = user.location;
-  listGroup.appendChild(locationItem);
+  const socialLinks = document.createElement("div");
+  socialLinks.className = "d-flex flex-wrap justify-content-center mt-3";
 
   if (user.github) {
-    const githubItem = document.createElement("li");
-    githubItem.className = "list-group-item";
-    githubItem.textContent = `GitHub: ${user.github}`;
-    listGroup.appendChild(githubItem);
+    const githubLink = document.createElement("a");
+    githubLink.href = user.github;
+    githubLink.className = "btn btn-secondary m-1 social-media";
+    githubLink.textContent = "GitHub";
+    socialLinks.appendChild(githubLink);
   }
 
   if (user.linkedin) {
-    const linkedinItem = document.createElement("li");
-    linkedinItem.className = "list-group-item";
-    linkedinItem.textContent = `LinkedIn: ${user.linkedin}`;
-    listGroup.appendChild(linkedinItem);
+    const linkedinLink = document.createElement("a");
+    linkedinLink.href = user.linkedin;
+    linkedinLink.className = "btn btn-secondary m-1 social-media";
+    linkedinLink.textContent = "LinkedIn";
+    socialLinks.appendChild(linkedinLink);
   }
 
   if (user.twitter) {
-    const twitterItem = document.createElement("li");
-    twitterItem.className = "list-group-item";
-    twitterItem.textContent = `Twitter: ${user.twitter}`;
-    listGroup.appendChild(twitterItem);
+    const twitterLink = document.createElement("a");
+    twitterLink.href = user.twitter;
+    twitterLink.className = "btn btn-secondary m-1 social-media";
+    twitterLink.textContent = "Twitter";
+    socialLinks.appendChild(twitterLink);
   }
 
   if (user.instagram) {
-    const instagramItem = document.createElement("li");
-    instagramItem.className = "list-group-item";
-    instagramItem.textContent = `Instagram: ${user.instagram}`;
-    listGroup.appendChild(instagramItem);
+    const instagramLink = document.createElement("a");
+    instagramLink.href = user.instagram;
+    instagramLink.className = "btn btn-secondary m-1 social-media";
+    instagramLink.textContent = "Instagram";
+    socialLinks.appendChild(instagramLink);
   }
 
-  card.appendChild(listGroup);
+  cardBody.appendChild(socialLinks);
+  card.appendChild(cardBody);
+
   cardDiv.appendChild(card);
   cardsRow.appendChild(cardDiv);
 };
