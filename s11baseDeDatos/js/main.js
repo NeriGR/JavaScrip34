@@ -1,43 +1,16 @@
-const getAllUser = async () =>{
-    let response = await fetch("https://js-f1380-default-rtdb.firebaseio.com/users/.json");
-let data = await response.json ();
-console.log(data)
-return data;
+import { getAllUsers } from "../modules/usersApi.js";
+
+const printAllUsers = async () => {
+  let users = await getAllUsers();
+  let list = document.createElement("ul");
+  users.forEach((user) => {
+    let { name = "N/A", lastname = "N/A", age = "N/A" } = user;
+    let listItem = document.createElement("li");
+    listItem.textContent = `${name} ${lastname} ${age}`;
+    list.append(listItem);
+  });
+  document.body.append(list);
+  console.log(users);
 };
 
-const printAllusers = async () => {
-    let users = await getAllUser();
-    console.log(users);
-
-};
-printAllusers();
-
-/*crear entradas*/
-const creatUser = async (userObject) => {
-    let response = await fetch("https://js-f1380-default-rtdb.firebaseio.com/users/.json",
-    {
-    method: "POST",
-    body: JSON.stringify(userObject),
-    }
-)
-let data = await response.json();
-console.log(date);
-return data;
-
-};
-
-/*actualizar datos*/
-
-const updateUser = async (userRef, newData) => {
-    let response = await fetch("https://js-f1380-default-rtdb.firebaseio.com/users/.json", 
-        {
-        method:"PUT", 
-        body:JSON.stringify(newData),
-}
-    )
-    let data = await response.json();
-    console.log(date);
-
-}
-
-/*eliminarr datos*/
+printAllUsers();
