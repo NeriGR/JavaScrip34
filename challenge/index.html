@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio Dom</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body class="bg-dark text-white">
+    <main class="container-fluid">
+      <div class="row mt-3">
+        <section class="col-12 col-md-6 gap-3">
+          <div class="p-3"><h3>Type your information</h3></div>
+          <form id="userForm">
+            <div class="mb-3 form-group">
+              <label for="name" class="form-label">Name (required):</label>
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="picSource" class="form-label"
+                >Pic Source (required):</label
+              >
+              <input
+                type="text"
+                id="picSource"
+                name="picSource"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="location" class="form-label"
+                >Location (required):</label
+              >
+              <input
+                type="text"
+                id="location"
+                name="location"
+                class="form-control"
+                required
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="aboutYou" class="form-label"
+                >About You (required):</label
+              >
+              <textarea
+                id="aboutYou"
+                name="aboutYou"
+                class="form-control"
+                required
+              ></textarea>
+            </div>
+            <h6 class="text-red">
+              Agrega tus redes sociales (No obligatorio.)
+            </h6>
+            <div class="mb-3 form-group">
+              <label for="github" class="form-label">GitHub:</label>
+              <input
+                type="text"
+                id="github"
+                name="github"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="linkedin" class="form-label">LinkedIn:</label>
+              <input
+                type="text"
+                id="linkedin"
+                name="linkedin"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="twitter" class="form-label">Twitter:</label>
+              <input
+                type="text"
+                id="twitter"
+                name="twitter"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3 form-group">
+              <label for="instagram" class="form-label">Instagram:</label>
+              <input
+                type="text"
+                id="instagram"
+                name="instagram"
+                class="form-control"
+              />
+            </div>
+            <div class="mb-3 form-group d-flex justify-content-center">
+              <button class="btn btn-primary" type="button" onclick="addUser()">
+                Submit
+              </button>
+              <div class="mb-3 form-check"></div>
+            </div>
+          </form>
+        </section>
+        <section class="col-12 col-md-6 gap-3">
+          <div class="p-3"><h3>Ve los perfiles</h3></div>
+          <div id="cardsRow" class="row"></div>
+        </section>
+      </div>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
